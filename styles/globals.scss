@@ -1,0 +1,241 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Poppins,sans-serif;
+  
+  /* width */
+::-webkit-scrollbar {
+  width: 2px;
+  height: 7px;
+  border-radius: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  border-radius: 10px;
+  background: transparent; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background: #2b3442; 
+}
+
+
+}
+
+header{
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 90px;
+  background-color: #182131;
+  .container{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 40px;
+  }
+  .logo{
+    img{
+      width: 99px;
+      height: 60px;
+    }
+  }
+  .input{
+    background-color: #2b3442;
+    width: 300px;
+    height: 40px;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 50px;
+    
+    }
+    input{
+      background-color: #2b3442;
+      color: white;
+      flex: 1;
+      padding:7px 40px 7px 15px;
+      outline: none;
+      border: 3px solid transparent;
+      border-radius: 50px;
+    &:focus{
+      input{
+        outline: 3px #363b44;
+      }
+    }
+    }
+    .icon{
+      height: 40px;
+      width: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+        Image{
+          width: 100%;
+       }
+    }
+  }
+
+  @keyframes animate{
+    0%{
+      transform: scale(1.2)
+    }
+    50%{
+      transform: scale(1.0)
+    }
+    100%{
+      transform: scale(1.2)
+    }
+  }
+  .cover{
+    width: 100%;
+    height: 683px;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(0deg,rgba(2,9,22,.9),hsla(0,0%,100%,0));
+
+    
+      img{
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 683px;
+        object-fit: cover;
+        animation: animate 12s infinite;
+        z-index: -10;
+      }
+
+      .container{
+        width: 98%;
+        height: 266px;
+        float: left;
+        position: absolute;
+        left: 1%;
+        top: 50%;
+        z-index: 1000;        
+        display: flex;
+        justify-content: space-between;
+        .controls{
+          width: 125px;
+          height: 40px;
+          margin-top: 230px;
+          display: flex;
+          align-items: center;
+          button{
+            width: 30px;
+            height: 40px;
+            font-size: 30px;
+            background-color: transparent;
+            border:none;
+            font-family: Arial, Helvetica, sans-serif;
+            color: #FFBA00;
+            cursor: pointer;
+          }
+          p{
+            color: #FFBA00;
+          }
+        }
+        .title{
+          font-size: 40px;
+          color: white;
+        }
+        .date{
+          color: #FFBA00;
+          font-size: 20px;
+        }
+        .popularity{
+          color: white;
+          font-size: 20px;
+        }
+      }
+     
+    }
+
+    .cards-line{
+      padding-top: 40px;
+      padding-bottom: 30px;
+      background-color: #020916;
+      color: white;
+      height: 500px;
+      h1{
+        margin: 1rem;
+        font-weight: lighter;
+        font-size: 30px;
+      }
+
+      .cards{
+        background-color: #020916;
+        display: flex;
+        width: 100%;
+        height: 295px;
+        overflow-x: scroll;
+        .card{
+          margin: 1rem;
+          margin-bottom: 0;
+          max-width: 166px;
+          max-height: 250px;
+          border-radius: 10px;
+          position: relative;
+          &:hover{
+            .overview{
+              visibility: visible;
+            }
+          }
+          .card-img{
+            width: 166px;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 10px;
+          }
+          .movie-info{
+            p{
+              position: absolute;
+              color: white;
+              width: 100%;
+              background-color: #2b3442;
+              padding: 5px 10px;
+              bottom: 0;
+              border-radius: 10px;
+              border-top-right-radius: 0;
+              border-top-left-radius: 0;
+              font-size: .7rem;
+              text-align: center;
+            }
+          }
+          .overview{
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            z-index: 3;
+            margin-top: -260px;
+            p{
+              position: absolute;
+              visibility: hidden;
+              color: white;
+              overflow-y: scroll;
+              width: 100%;
+              background-color: #2b3442de ;
+              padding: 5px 10px;
+              bottom: 0;
+              top: 0;
+              border-radius: 10px;
+              font-size: .7rem;
+              text-align: center;
+            }
+            &:hover{
+              p{
+
+                cursor: pointer;
+                visibility:visible;
+              }
+            }
+          }
+        }
+      }
+  }
+    
+  
